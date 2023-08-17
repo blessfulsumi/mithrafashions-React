@@ -1,4 +1,5 @@
 import React from "react";
+import DividerComponent from "./Divider.component";
 
 const FilterComponent = () => {
   return (
@@ -12,6 +13,7 @@ const FilterComponent = () => {
         <option value="Women">Women</option>
       </select>
       <hr></hr>
+      <DividerComponent />
     </div>
   );
 };

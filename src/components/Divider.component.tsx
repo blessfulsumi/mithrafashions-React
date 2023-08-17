@@ -2,7 +2,9 @@ import React from 'react'
 
 const DividerComponent = () => {
   return (
-    <div>DividerComponent</div>
+    <div>
+       <hr className='w-10'></hr>
+    </div>
   )
 }
 

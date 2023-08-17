@@ -8,9 +8,10 @@ const HomePage = () => {
     
      
       <FilterComponent/>
-     
+      <div className="min-h-[90vh] bg-yellow-100">
      
       <ProductListComponent/>
+      </div>
     
     </div>
   )
