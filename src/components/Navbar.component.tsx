@@ -6,7 +6,7 @@ const NavbarComponent = () => {
     <nav className="bg-white border-gray-200">
       <div className="flex items-center justify-between p-4">
         <NavLink
-          className="self-center text-2xl font-semibold whitespace-nowrap text-orange-700 text-4xl"
+          className="self-center text-4xl font-semibold whitespace-nowrap text-orange-700"
           to="/"
         >
           MithraFashions
@@ -14,22 +14,37 @@ const NavbarComponent = () => {
 
         <ul className="font-medium flex rounded-lg gap-4">
           <li>
-            <NavLink className="p-2 text-white bg-blue-700 rounded" to="/">
+          <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "p-2 text-white bg-blue-900 rounded"
+                  : "p-2 text-blue-900 rounded"
+              }
+              to="/"
+            >
               Home
             </NavLink>
           </li>
           <li>
-            <NavLink
-              className="p-2 text-gray-900 rounded hover:bg-gray-100"
-              to="/cart"
+          <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "p-2 text-white bg-blue-900 rounded"
+                  : "p-2 text-blue-900 rounded"
+              }
+              to="/"
             >
               Cart
             </NavLink>
           </li>
           <li>
-            <NavLink
-              className="p-2 text-gray-900 rounded hover:bg-gray-100"
-              to="/login"
+          <NavLink
+              className={({ isActive }) =>
+                isActive
+                  ? "p-2 text-white bg-blue-900 rounded"
+                  : "p-2 text-blue-900 rounded"
+              }
+              to="/"
             >
               Login
             </NavLink>

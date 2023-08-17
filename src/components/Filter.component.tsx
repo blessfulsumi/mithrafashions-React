@@ -11,6 +11,7 @@ const FilterComponent = () => {
         <option value="Kids">Kids</option>
         <option value="Women">Women</option>
       </select>
+      <hr></hr>
     </div>
   );
 };

@@ -4,9 +4,14 @@ import ProductListComponent from '../components/ProductList.component'
 
 const HomePage = () => {
   return (
-    <div className='flex gap-2'>
+    <div className='grid grid-cols-[30%_70%]'>
+    
+     
       <FilterComponent/>
+     
+     
       <ProductListComponent/>
+    
     </div>
   )
 }

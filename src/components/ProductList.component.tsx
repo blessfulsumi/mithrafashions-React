@@ -12,7 +12,7 @@ const ProductListComponent = () => {
         </p>
       </div>
       <div className="flex px-2 space-x-6 text-neutral-600">
-        <p>Autumn dress</p>
+        <p>Ethnic dress</p>
         <p className="font-bold">$85</p>
       </div>
       <div className="flex px-2 space-x-20 text-xs text-neutral-300">
