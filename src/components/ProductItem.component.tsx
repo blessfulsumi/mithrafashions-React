@@ -21,20 +21,24 @@ const ProductItemComponent = () => {
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Totam vero
           omnis fuga tempore debitis reiciendis aliquid eum minima culpa quasi.
         </p>
-        <p className="border-x-2 align-middle w-40 h-6 text-white rounded hover:bg-slate-700  m-auto bg-red-600">
+        
           <div>
             {quantity > 0 && (
-              <div>
-                <button onClick={handleDecrement}>-</button>
-                <button>{quantity}</button>
-                <button onClick={handleIncrement}>+</button>
+              <div className="flex  px-20 m-2">
+                <div className="border-x-2  align-middle  w-4 h-6 text-white rounded hover:bg-slate-700   bg-red-600">
+                  <button onClick={handleDecrement}>-</button>
+                </div>
+                <div className="border-x-2  align-middle  w-4 h-6 text-white rounded hover:bg-slate-700  bg-red-600"> {quantity} </div>
+                <div className="border-x-2 align-middle  w-4 h-6 text-white rounded hover:bg-slate-700   bg-red-600">
+                  <button onClick={handleIncrement}>+</button>
+                </div>
               </div>
             )}
             {quantity === 0 && (
-              <button onClick={() => handleIncrement()}>Add to Cart</button>
+              <button className="border-x-2 align-middle  w-40 h-6 text-white rounded hover:bg-slate-700   bg-red-600" onClick={() => handleIncrement()}>Add to Cart</button>
             )}
           </div>
-        </p>
+    
       </div>
     </div>
   );
