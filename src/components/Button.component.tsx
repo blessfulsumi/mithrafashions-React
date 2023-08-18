@@ -1,36 +1,38 @@
 import React, { useState } from "react";
+import { resolveTripleslashReference } from "typescript";
+
+interface Props{
+  children?:React.ReactNode;
+  label:string;
+  onClick:()=>void;
+  variant?:string;
+  className?:string;
+}
 
 
 const name="SALE";
-const ButtonComponent = () => {
-    const [quantity, setQuantity] = useState(0);
-  
-    const handleIncrement = () => {
-      setQuantity(quantity + 1);
-    };
-  
-    const handleDecrement = () => {
-      setQuantity(quantity - 1);
-    };
+const ButtonComponent :React.FC<Props>= ( {
+
+   label,
+   onClick,
+   variant="default",
+   className,
+   ...rest})=>{
+//border-x-2 align-middle w-40 h-6 text-white rounded hover:bg-slate-700  m-auto bg-red-600
     
   return (
-    <div>
-      <div>{quantity > 0 && (
-        <div className="absolute top-0 left-0 text-center w-10 h-6 text-white rounded hover:bg-slate-700  m-1 bg-red-600">
-          <button onClick={handleDecrement}>-</button>
-          <span>{quantity}</span>
-          <button onClick={handleIncrement}>+</button>
-        </div>
-      )}
-      {quantity === 0 && (
-        <button className="absolute top-0 left-0 w-10 h-6 text-white rounded hover:bg-slate-700  m-1 bg-red-600" onClick={() => handleIncrement()}>
-         {name}
-        </button>
-      )}</div>
+    <button
+      {...rest}
+      className={`  text-white hover:bg-slate-700 bg-red-600${
+        variant==="default"
+        ? "border-slate-50 bg-red-600 text-white"
+        : "border-slate-900 bg-slate-100 text-slate-950"
+      }${className}`}
+      onClick={onClick}
+      >
+        {label}
 
-     
-    </div>
-
+    </button>
   )
 }
 

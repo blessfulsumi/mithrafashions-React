@@ -26,6 +26,8 @@ const router = createBrowserRouter([
         path:"cart",
     element:<CartPage />
       },
+    ],
+  },
       {
         path:"login",
     element:<LoginPage />
@@ -35,11 +37,11 @@ const router = createBrowserRouter([
     element:<RegisterPage />
       },
       {
-        path:"product/:productId",
+        path:"product",
     element:<ProductDetailsPage/>
       }
-    ],
-  },
+    
+  
 ]);
 
 // function App() {

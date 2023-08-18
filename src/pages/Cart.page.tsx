@@ -1,10 +1,11 @@
 import React from 'react'
 import ProductItemComponent from '../components/ProductItem.component'
+import ProductListComponent from '../components/ProductList.component'
 
 const CartPage = () => {
   return (
     <div>
-      <ProductItemComponent/>
+      <ProductListComponent/>
     </div>
   )
 }

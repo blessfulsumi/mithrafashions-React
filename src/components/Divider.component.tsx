@@ -3,7 +3,7 @@ import React from 'react'
 const DividerComponent = () => {
   return (
     <div>
-       <hr className='w-10'></hr>
+       <hr className=""></hr>
     </div>
   )
 }
